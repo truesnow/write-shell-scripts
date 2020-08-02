@@ -1,0 +1,758 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12. 位置参数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ch13/" />
+    
+    
+    <link rel="prev" href="../ch11/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    本书目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch01/">
+            
+                <a href="../ch01/">
+            
+                    
+                    1. 创建你的第一个脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ch02/">
+            
+                <a href="../ch02/">
+            
+                    
+                    2. 编辑已有脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../ch03/">
+            
+                <a href="../ch03/">
+            
+                    
+                    3. HERE 脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../ch04/">
+            
+                <a href="../ch04/">
+            
+                    
+                    4. 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../ch05/">
+            
+                <a href="../ch05/">
+            
+                    
+                    5. 命令替换和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../ch06/">
+            
+                <a href="../ch06/">
+            
+                    
+                    6. Shell 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ch07/">
+            
+                <a href="../ch07/">
+            
+                    
+                    7. 系统信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ch08/">
+            
+                <a href="../ch08/">
+            
+                    
+                    8. 流程控制（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../ch09/">
+            
+                <a href="../ch09/">
+            
+                    
+                    9. 远离问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../ch10/">
+            
+                <a href="../ch10/">
+            
+                    
+                    10. 键盘输入和算术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../ch11/">
+            
+                <a href="../ch11/">
+            
+                    
+                    11. 流程控制（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    12. 位置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../ch13/">
+            
+                <a href="../ch13/">
+            
+                    
+                    13. 流程控制（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../ch14/">
+            
+                <a href="../ch14/">
+            
+                    
+                    14. 错误、信号和陷阱（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../ch15/">
+            
+                <a href="../ch15/">
+            
+                    
+                    15. 错误、信号和陷阱（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../ch16/">
+            
+                <a href="../ch16/">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >12. 位置参数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="12-&#x4F4D;&#x7F6E;&#x53C2;&#x6570;">12. &#x4F4D;&#x7F6E;&#x53C2;&#x6570;</h1>
+<p>&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x811A;&#x672C;&#x793A;&#x4F8B;&#x957F;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># sysinfo_page - A script to produce a system information HTML file</span>
+
+<span class="hljs-comment">##### Constants</span>
+
+TITLE=<span class="hljs-string">&quot;System Information for <span class="hljs-variable">$HOSTNAME</span>&quot;</span>
+RIGHT_NOW=$(date +<span class="hljs-string">&quot;%x %r %Z&quot;</span>)
+TIME_STAMP=<span class="hljs-string">&quot;Updated on <span class="hljs-variable">$RIGHT_NOW</span> by <span class="hljs-variable">$USER</span>&quot;</span>
+
+<span class="hljs-comment">##### Functions</span>
+
+<span class="hljs-function"><span class="hljs-title">system_info</span></span>()
+{
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;System release info&lt;/h2&gt;&quot;</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;p&gt;Function not yet implemented&lt;/p&gt;&quot;</span>
+
+} <span class="hljs-comment"># end of system_info</span>
+
+
+<span class="hljs-function"><span class="hljs-title">show_uptime</span></span>()
+{
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;System uptime&lt;/h2&gt;&quot;</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;pre&gt;&quot;</span>
+    uptime
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>
+
+} <span class="hljs-comment"># end of show_uptime</span>
+
+
+<span class="hljs-function"><span class="hljs-title">drive_space</span></span>()
+{
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;Filesystem space&lt;/h2&gt;&quot;</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;pre&gt;&quot;</span>
+    df
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>
+
+} <span class="hljs-comment"># end of drive_space</span>
+
+
+<span class="hljs-function"><span class="hljs-title">home_space</span></span>()
+{
+    <span class="hljs-comment"># Only the superuser can get this information</span>
+
+    <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$(id -u)</span>&quot;</span> = <span class="hljs-string">&quot;0&quot;</span> ]; <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;Home directory space by user&lt;/h2&gt;&quot;</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;pre&gt;&quot;</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Bytes Directory&quot;</span>
+        du <span class="hljs-_">-s</span> /home/* | sort -nr
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>
+    <span class="hljs-keyword">fi</span>
+
+} <span class="hljs-comment"># end of home_space</span>
+
+
+
+<span class="hljs-comment">##### Main</span>
+
+cat &lt;&lt;- _EOF_
+  &lt;html&gt;
+  &lt;head&gt;
+      &lt;title&gt;<span class="hljs-variable">$TITLE</span>&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+      &lt;h1&gt;<span class="hljs-variable">$TITLE</span>&lt;/h1&gt;
+      &lt;p&gt;<span class="hljs-variable">$TIME_STAMP</span>&lt;/p&gt;
+      $(system_info)
+      $(show_uptime)
+      $(drive_space)
+      $(home_space)
+  &lt;/body&gt;
+  &lt;/html&gt;
+_EOF_
+</code></pre>
+<p>&#x73B0;&#x5728;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x589E;&#x52A0;&#x4EE5;&#x4E0B;&#x529F;&#x80FD;&#xFF1A;</p>
+<ul>
+<li>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x6307;&#x5B9A;&#x8981;&#x8F93;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x672A;&#x6307;&#x5B9A;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;</li>
+<li>&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x63D0;&#x793A;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x5E76;&#x4E14;&#x5728;&#x6587;&#x4EF6;&#x540D;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x7684;&#x65F6;&#x5019;&#x63D0;&#x9192;&#x7528;&#x6237;&#x5C06;&#x8986;&#x76D6;&#x5176;&#x5185;&#x5BB9;</li>
+<li>&#x81EA;&#x7136;&#x5730;&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x80FD;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5E2E;&#x52A9;&#x9009;&#x9879;&#x6765;&#x663E;&#x793A;&#x4F7F;&#x7528;&#x4FE1;&#x606F;</li>
+</ul>
+<p>&#x4EE5;&#x4E0A;&#x6240;&#x6709;&#x529F;&#x80FD;&#x90FD;&#x548C;&#x9009;&#x9879;&#x548C;&#x53C2;&#x6570;&#x6709;&#x5173;&#x3002;&#x8981;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7528;&#x5230; shell &#x4E2D;&#x7684; <strong>&#x4F4D;&#x7F6E;&#x53C2;&#x6570;</strong> &#x529F;&#x80FD;&#x3002;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x7CFB;&#x5217;&#x7279;&#x6B8A;&#x53D8;&#x91CF;&#xFF08;<code>$0</code> &#x5230; <code>$9</code>)&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x5185;&#x5BB9;&#x3002;
+&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-sh">some_program word1 word2 word3
+</code></pre>
+<p>&#x5982;&#x679C; some_program &#x662F;&#x4E00;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x8BFB;&#x53D6;&#x5176;&#x4E2D;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x9879;&#x76EE;&#xFF1A;</p>
+<ul>
+<li><code>$0</code> &#x5305;&#x542B; some_program</li>
+<li><code>$1</code> &#x5305;&#x542B; word1</li>
+<li><code>$2</code> &#x5305;&#x542B; word2</li>
+<li><code>$3</code> &#x5305;&#x542B; word3</li>
+</ul>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x811A;&#x672C;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Positional Parameters&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;$0 = &apos;</span> <span class="hljs-variable">$0</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;$1 = &apos;</span> <span class="hljs-variable">$1</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;$2 = &apos;</span> <span class="hljs-variable">$2</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;$3 = &apos;</span> <span class="hljs-variable">$3</span>
+</code></pre>
+<h2 id="&#x68C0;&#x6D4B;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;">&#x68C0;&#x6D4B;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;</h2>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x51E0;&#x79CD;&#x65B9;&#x5F0F;&#x6765;&#x68C0;&#x67E5;&#x4F60;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#xFF0C;&#x68C0;&#x67E5; <code>$1</code>&#xFF0C;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> != <span class="hljs-string">&quot;&quot;</span> ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Positional parameter 1 contains something&quot;</span>
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Positional parameter 1 is empty&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#xFF0C;shell &#x4E2D;&#x7EF4;&#x62A4;&#x4E86;&#x4E00;&#x4E2A;&#x540D;&#x4E3A; <code>$#</code> &#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5176;&#x4E2D;&#x5305;&#x542B;&#x547D;&#x4EE4;&#x884C;&#x7684;&#x9879;&#x76EE;&#x6570;&#xFF0C;&#x6B64;&#x5916;&#xFF0C;<code>$0</code> &#x8868;&#x793A;&#x547D;&#x4EE4;&#x540D;&#x79F0;&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-variable">$#</span> <span class="hljs-_">-gt</span> 0 ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your command line contains <span class="hljs-variable">$#</span> arguments&quot;</span>
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Your command line contains no arguments&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<h2 id="&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;">&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;</h2>
+<p>&#x5982;&#x524D;&#x9762;&#x6240;&#x63D0;&#x5230;&#x8FC7;&#x7684;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x5C5E;&#x4E8E; GNU &#x9879;&#x76EE;&#x7684;&#xFF0C;&#x90FD;&#x652F;&#x6301;&#x77ED;&#x9009;&#x9879;&#x548C;&#x957F;&#x9009;&#x9879;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x663E;&#x793A;&#x547D;&#x4EE4;&#x7684;&#x5E2E;&#x52A9;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>-h</code> &#x9009;&#x9879;&#x6216; <code>--help</code> &#x9009;&#x9879;&#x3002;&#x957F;&#x9009;&#x9879;&#x901A;&#x5E38;&#x662F;&#x4E24;&#x4E2A;&#x77ED;&#x6A2A;&#x7EBF;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x5C06;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x811A;&#x672C;&#x4E2D;&#x91C7;&#x7528;&#x6B64;&#x60EF;&#x4F8B;&#x3002;
+&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh">interactive=
+filename=~/sysinfo_page.html
+
+<span class="hljs-keyword">while</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> != <span class="hljs-string">&quot;&quot;</span> ]; <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-variable">$1</span> <span class="hljs-keyword">in</span>
+        <span class="hljs-_">-f</span> | --file ) <span class="hljs-built_in">shift</span>
+                                filename=<span class="hljs-variable">$1</span>
+                                ;;
+        -i | --interactive ) interactive=1
+                                ;;
+        -h | --help ) usage
+                                <span class="hljs-built_in">exit</span>
+                                ;;
+        * ) usage
+                                <span class="hljs-built_in">exit</span> 1
+    <span class="hljs-keyword">esac</span>
+    <span class="hljs-built_in">shift</span>
+<span class="hljs-keyword">done</span>
+</code></pre>
+<p>&#x811A;&#x672C;&#x4E2D;&#x7684; <code>shift</code> &#x662F; shell &#x4E2D;&#x5904;&#x7406;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x7684;&#x4E00;&#x4E2A;&#x5185;&#x7F6E;&#x547D;&#x4EE4;&#x3002;&#x6BCF;&#x6B21;&#x8C03;&#x7528; <code>shift</code>&#xFF0C;&#x5B83;&#x5C06;&#x4F1A;&#x4F7F;&#x4F4D;&#x7F6E;&#x53C2;&#x6570;&#x51CF; 1&#x3002;<code>$2</code> &#x53D8;&#x6210; <code>$1</code>&#xFF0C;<code>$3</code> &#x53D8;&#x6210; <code>$2</code>&#xFF0C;<code>$4</code> &#x53D8;&#x6210; <code>$3</code> &#x7B49;&#x7B49;&#x3002;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;You start with <span class="hljs-variable">$#</span> positional parameters&quot;</span>
+
+<span class="hljs-comment"># Loop until all parameters are used up</span>
+<span class="hljs-keyword">while</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> != <span class="hljs-string">&quot;&quot;</span> ]; <span class="hljs-keyword">do</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Parameter 1 equals <span class="hljs-variable">$1</span>&quot;</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;You now have <span class="hljs-variable">$#</span> positional parameters&quot;</span>
+
+    <span class="hljs-comment"># Shift all the parameters down by one</span>
+    <span class="hljs-built_in">shift</span>
+
+<span class="hljs-keyword">done</span>
+</code></pre>
+<h2 id="&#x83B7;&#x53D6;&#x9009;&#x9879;&#x53C2;&#x6570;">&#x83B7;&#x53D6;&#x9009;&#x9879;&#x53C2;&#x6570;</h2>
+<p><code>-f</code> &#x9009;&#x9879;&#x8981;&#x6C42;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x4F7F;&#x7528; <code>shift</code> &#x6765;&#x4ECE;&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x83B7;&#x53D6;&#xFF0C;&#x5E76;&#x5C06;&#x5176;&#x8D4B;&#x503C;&#x7ED9; filename&#x3002;</p>
+<h2 id="&#x5C06;&#x547D;&#x4EE4;&#x884C;&#x5904;&#x7406;&#x5668;&#x96C6;&#x6210;&#x5230;&#x811A;&#x672C;">&#x5C06;&#x547D;&#x4EE4;&#x884C;&#x5904;&#x7406;&#x5668;&#x96C6;&#x6210;&#x5230;&#x811A;&#x672C;</h2>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># sysinfo_page - A script to produce a system information HTML file</span>
+
+<span class="hljs-comment">##### Constants</span>
+
+TITLE=<span class="hljs-string">&quot;System Information for <span class="hljs-variable">$HOSTNAME</span>&quot;</span>
+RIGHT_NOW=$(date +<span class="hljs-string">&quot;%x %r %Z&quot;</span>)
+TIME_STAMP=<span class="hljs-string">&quot;Updated on <span class="hljs-variable">$RIGHT_NOW</span> by <span class="hljs-variable">$USER</span>&quot;</span>
+
+<span class="hljs-comment">##### Functions</span>
+
+<span class="hljs-function"><span class="hljs-title">system_info</span></span>()
+{
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;System release info&lt;/h2&gt;&quot;</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;p&gt;Function not yet implemented&lt;/p&gt;&quot;</span>
+
+} <span class="hljs-comment"># end of system_info</span>
+
+
+<span class="hljs-function"><span class="hljs-title">show_uptime</span></span>()
+{
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;System uptime&lt;/h2&gt;&quot;</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;pre&gt;&quot;</span>
+    uptime
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>
+
+} <span class="hljs-comment"># end of show_uptime</span>
+
+
+<span class="hljs-function"><span class="hljs-title">drive_space</span></span>()
+{
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;Filesystem space&lt;/h2&gt;&quot;</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;pre&gt;&quot;</span>
+    df
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>
+
+} <span class="hljs-comment"># end of drive_space</span>
+
+
+<span class="hljs-function"><span class="hljs-title">home_space</span></span>()
+{
+    <span class="hljs-comment"># Only the superuser can get this information</span>
+
+    <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$(id -u)</span>&quot;</span> = <span class="hljs-string">&quot;0&quot;</span> ]; <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;h2&gt;Home directory space by user&lt;/h2&gt;&quot;</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;pre&gt;&quot;</span>
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Bytes Directory&quot;</span>
+        du <span class="hljs-_">-s</span> /home/* | sort -nr
+        <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;&lt;/pre&gt;&quot;</span>
+    <span class="hljs-keyword">fi</span>
+
+} <span class="hljs-comment"># end of home_space</span>
+
+
+<span class="hljs-function"><span class="hljs-title">write_page</span></span>()
+{
+    cat &lt;&lt;- _EOF_
+    &lt;html&gt;
+        &lt;head&gt;
+        &lt;title&gt;<span class="hljs-variable">$TITLE</span>&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;h1&gt;<span class="hljs-variable">$TITLE</span>&lt;/h1&gt;
+        &lt;p&gt;<span class="hljs-variable">$TIME_STAMP</span>&lt;/p&gt;
+        $(system_info)
+        $(show_uptime)
+        $(drive_space)
+        $(home_space)
+        &lt;/body&gt;
+    &lt;/html&gt;
+_EOF_
+
+}
+
+<span class="hljs-function"><span class="hljs-title">usage</span></span>()
+{
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;usage: sysinfo_page [[[-f file ] [-i]] | [-h]]&quot;</span>
+}
+
+
+<span class="hljs-comment">##### Main</span>
+
+interactive=
+filename=~/sysinfo_page.html
+
+<span class="hljs-keyword">while</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$1</span>&quot;</span> != <span class="hljs-string">&quot;&quot;</span> ]; <span class="hljs-keyword">do</span>
+    <span class="hljs-keyword">case</span> <span class="hljs-variable">$1</span> <span class="hljs-keyword">in</span>
+        <span class="hljs-_">-f</span> | --file ) <span class="hljs-built_in">shift</span>
+                                filename=<span class="hljs-variable">$1</span>
+                                ;;
+        -i | --interactive ) interactive=1
+                                ;;
+        -h | --help ) usage
+                                <span class="hljs-built_in">exit</span>
+                                ;;
+        * ) usage
+                                <span class="hljs-built_in">exit</span> 1
+    <span class="hljs-keyword">esac</span>
+    <span class="hljs-built_in">shift</span>
+<span class="hljs-keyword">done</span>
+
+
+<span class="hljs-comment"># Test code to verify command line processing</span>
+
+<span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$interactive</span>&quot;</span> = <span class="hljs-string">&quot;1&quot;</span> ]; <span class="hljs-keyword">then</span>
+ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;interactive is on&quot;</span>
+<span class="hljs-keyword">else</span>
+ <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;interactive is off&quot;</span>
+<span class="hljs-keyword">fi</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;output file = <span class="hljs-variable">$filename</span>&quot;</span>
+
+
+<span class="hljs-comment"># Write page (comment out until testing is complete)</span>
+
+<span class="hljs-comment"># write_page &gt; $filename</span>
+</code></pre>
+<h2 id="&#x6DFB;&#x52A0;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;">&#x6DFB;&#x52A0;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;</h2>
+<p>&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$interactive</span>&quot;</span> = <span class="hljs-string">&quot;1&quot;</span> ]; <span class="hljs-keyword">then</span>
+
+    response=
+
+    <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter name of output file [<span class="hljs-variable">$filename</span>] &gt; &quot;</span>
+    <span class="hljs-built_in">read</span> response
+    <span class="hljs-keyword">if</span> [ -n <span class="hljs-string">&quot;<span class="hljs-variable">$response</span>&quot;</span> ]; <span class="hljs-keyword">then</span>
+        filename=<span class="hljs-variable">$response</span>
+    <span class="hljs-keyword">fi</span>
+
+    <span class="hljs-keyword">if</span> [ <span class="hljs-_">-f</span> <span class="hljs-variable">$filename</span> ]; <span class="hljs-keyword">then</span>
+        <span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Output file exists. Overwrite? (y/n) &gt; &quot;</span>
+        <span class="hljs-built_in">read</span> response
+        <span class="hljs-keyword">if</span> [ <span class="hljs-string">&quot;<span class="hljs-variable">$response</span>&quot;</span> != <span class="hljs-string">&quot;y&quot;</span> ]; <span class="hljs-keyword">then</span>
+            <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Exiting program.&quot;</span>
+            <span class="hljs-built_in">exit</span> 1
+        <span class="hljs-keyword">fi</span>
+    <span class="hljs-keyword">fi</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>&#x9996;&#x5148;&#xFF0C;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5F00;&#x542F;&#x4E86;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x8BA9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x540D;&#x3002;&#x6CE8;&#x610F;&#x6211;&#x4EEC;&#x63D0;&#x793A;&#x8BED;&#x7684;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter name of output file [<span class="hljs-variable">$filename</span>] &gt; &quot;</span>
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x5C06; filename &#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x663E;&#x793A;&#x51FA;&#x6765;&#xFF0C;&#x4EE5;&#x9632;&#x7528;&#x6237;&#x76F4;&#x63A5;&#x6309;&#x4E0B;&#x4E86; enter &#x952E;&#x65F6;&#xFF0C;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x6587;&#x4EF6;&#x540D;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ch11/" class="navigation navigation-prev " aria-label="Previous page: 11. 流程控制（二）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ch13/" class="navigation navigation-next " aria-label="Next page: 13. 流程控制（三）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"12. 位置参数","level":"1.14","depth":1,"next":{"title":"13. 流程控制（三）","level":"1.15","depth":1,"path":"ch13/README.md","ref":"ch13/README.md","articles":[]},"previous":{"title":"11. 流程控制（二）","level":"1.13","depth":1,"path":"ch11/README.md","ref":"ch11/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch12/README.md","mtime":"2020-08-02T08:29:41.243Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-02T08:39:36.980Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

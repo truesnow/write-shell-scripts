@@ -1,0 +1,608 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>6. Shell 函数 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ch07/" />
+    
+    
+    <link rel="prev" href="../ch05/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    本书目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch01/">
+            
+                <a href="../ch01/">
+            
+                    
+                    1. 创建你的第一个脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ch02/">
+            
+                <a href="../ch02/">
+            
+                    
+                    2. 编辑已有脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../ch03/">
+            
+                <a href="../ch03/">
+            
+                    
+                    3. HERE 脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../ch04/">
+            
+                <a href="../ch04/">
+            
+                    
+                    4. 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../ch05/">
+            
+                <a href="../ch05/">
+            
+                    
+                    5. 命令替换和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    6. Shell 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ch07/">
+            
+                <a href="../ch07/">
+            
+                    
+                    7. 系统信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ch08/">
+            
+                <a href="../ch08/">
+            
+                    
+                    8. 流程控制（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../ch09/">
+            
+                <a href="../ch09/">
+            
+                    
+                    9. 远离问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../ch10/">
+            
+                <a href="../ch10/">
+            
+                    
+                    10. 键盘输入和算术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../ch11/">
+            
+                <a href="../ch11/">
+            
+                    
+                    11. 流程控制（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ch12/">
+            
+                <a href="../ch12/">
+            
+                    
+                    12. 位置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../ch13/">
+            
+                <a href="../ch13/">
+            
+                    
+                    13. 流程控制（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../ch14/">
+            
+                <a href="../ch14/">
+            
+                    
+                    14. 错误、信号和陷阱（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../ch15/">
+            
+                <a href="../ch15/">
+            
+                    
+                    15. 错误、信号和陷阱（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../ch16/">
+            
+                <a href="../ch16/">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6. Shell 函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="6-shell-&#x51FD;&#x6570;">6. Shell &#x51FD;&#x6570;</h1>
+<p>&#x5F53;&#x7A0B;&#x5E8F;&#x8D8A;&#x6765;&#x8D8A;&#x957F;&#x3001;&#x8D8A;&#x6765;&#x8D8A;&#x590D;&#x6742;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x53D8;&#x5F97;&#x8D8A;&#x6765;&#x8D8A;&#x96BE;&#x8BBE;&#x8BA1;&#x3001;&#x7F16;&#x7801;&#x548C;&#x7EF4;&#x62A4;&#x3002;&#x8FD9;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F1A;&#x5C06;&#x5355;&#x4E2A;&#x5DE8;&#x5927;&#x7684;&#x4EFB;&#x52A1;&#x62C6;&#x5206;&#x4E3A;&#x4E00;&#x7CFB;&#x5217;&#x5C0F;&#x7684;&#x4EFB;&#x52A1;&#x3002;
+&#x4F8B;&#x5982;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x8981;&#x5411;&#x4E00;&#x4E2A;&#x5916;&#x661F;&#x4EBA;&#x63CF;&#x8FF0;&#x5982;&#x4F55;&#x53BB;&#x4E00;&#x5BB6;&#x8D85;&#x5E02;&#x4E70;&#x83DC;&#xFF0C;&#x6211;&#x4EEC;&#x6700;&#x5F00;&#x59CB;&#x53EF;&#x80FD;&#x8FD9;&#x6837;&#x63CF;&#x8FF0;&#xFF1A;</p>
+<ul>
+<li>&#x79BB;&#x5F00;&#x5BB6;</li>
+<li>&#x5F00;&#x8F66;&#x5230;&#x8D85;&#x5E02;</li>
+<li>&#x505C;&#x8F66;</li>
+<li>&#x8FDB;&#x5165;&#x8D85;&#x5E02;</li>
+<li>&#x4E70;&#x83DC;</li>
+<li>&#x5F00;&#x8F66;&#x56DE;&#x5BB6;</li>
+<li>&#x505C;&#x8F66;</li>
+<li>&#x56DE;&#x5BB6;</li>
+</ul>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E2A;&#x5916;&#x661F;&#x4EBA;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x80FD;&#x5BF9;&#x300C;&#x505C;&#x8F66;&#x300D;&#x9700;&#x8981;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x8BF4;&#x660E;&#xFF1A;</p>
+<ul>
+<li>&#x5BFB;&#x627E;&#x505C;&#x8F66;&#x4F4D;</li>
+<li>&#x5F00;&#x8F66;&#x8FDB;&#x5165;&#x505C;&#x8F66;&#x4F4D;</li>
+<li>&#x5173;&#x95ED;&#x9A6C;&#x8FBE;</li>
+<li>&#x62C9;&#x624B;&#x5239;</li>
+<li>&#x4E0B;&#x8F66;</li>
+<li>&#x9501;&#x8F66;</li>
+</ul>
+<p>&#x5BF9;&#x4E8E;&#x300C;&#x5173;&#x95ED;&#x9A6C;&#x8FBE;&#x300D;&#x8FD9;&#x4E00;&#x6B65;&#x53EF;&#x80FD;&#x53C8;&#x6709;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x5982;&#x300C;&#x5173;&#x6389;&#x5F15;&#x64CE;&#x300D;&#x3001;&#x300C;&#x62D4;&#x51FA;&#x94A5;&#x5319;&#x300D;&#x7B49;&#x3002;
+&#x4E0A;&#x9762;&#x7684;&#x6B65;&#x9AA4;&#x6211;&#x4EEC;&#x79F0;&#x4E3A; <strong>&#x81EA;&#x4E0A;&#x800C;&#x4E0B;&#x8BBE;&#x8BA1;</strong>&#x3002;&#x8FD9;&#x4E2A;&#x6280;&#x672F;&#x53EF;&#x4EE5;&#x8BA9;&#x4F60;&#x5C06;&#x5927;&#x7684;&#x590D;&#x6742;&#x7684;&#x4EFB;&#x52A1;&#x62C6;&#x4E3A;&#x5F88;&#x591A;&#x5C0F;&#x7684;&#x7B80;&#x5355;&#x7684;&#x4EFB;&#x52A1;&#x3002;
+&#x5BF9;&#x793A;&#x4F8B;&#x6765;&#x8BF4;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>shell &#x51FD;&#x6570;</strong> &#x6765;&#x505A;&#x3002;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># sysinfo_page - A script to produce an system information HTML file</span>
+
+<span class="hljs-comment">##### Constants</span>
+
+TITLE=<span class="hljs-string">&quot;System Information for <span class="hljs-variable">$HOSTNAME</span>&quot;</span>
+RIGHT_NOW=$(date +<span class="hljs-string">&quot;%x %r %Z&quot;</span>)
+TIME_STAMP=<span class="hljs-string">&quot;Updated on <span class="hljs-variable">$RIGHT_NOW</span> by <span class="hljs-variable">$USER</span>&quot;</span>
+
+<span class="hljs-comment">##### Functions</span>
+
+<span class="hljs-function"><span class="hljs-title">system_info</span></span>()
+{
+
+}
+
+
+<span class="hljs-function"><span class="hljs-title">show_uptime</span></span>()
+{
+
+}
+
+
+<span class="hljs-function"><span class="hljs-title">drive_space</span></span>()
+{
+
+}
+
+
+<span class="hljs-function"><span class="hljs-title">home_space</span></span>()
+{
+
+}
+
+<span class="hljs-comment">##### Main</span>
+
+cat &lt;&lt;- _EOF_
+  &lt;html&gt;
+  &lt;head&gt;
+      &lt;title&gt;<span class="hljs-variable">$TITLE</span>&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+      &lt;h1&gt;<span class="hljs-variable">$TITLE</span>&lt;/h1&gt;
+      &lt;p&gt;<span class="hljs-variable">$TIME_STAMP</span>&lt;/p&gt;
+      $(system_info)
+      $(show_uptime)
+      $(drive_space)
+      $(home_space)
+  &lt;/body&gt;
+  &lt;/html&gt;
+_EOF_
+</code></pre>
+<p>&#x51FD;&#x6570;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x51E0;&#x4E2A;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#xFF0C;&#x5FC5;&#x987B;&#x5728;&#x4F7F;&#x7528;&#x524D;&#x58F0;&#x660E;&#x3002;</li>
+<li>&#x7B2C;&#x4E8C;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#xFF08;&#x5728; <code>{}</code> &#x4E4B;&#x95F4;&#x7684;&#xFF09;&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x542B;&#x6709;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x547D;&#x4EE4;&#xFF08;&#x50CF;&#x4E0A;&#x9762;&#x7684;&#x811A;&#x672C;&#x8FD0;&#x884C;&#x662F;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x51FD;&#x6570;&#x4F53;&#x90FD;&#x662F;&#x7A7A;&#x7684;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x6BCF;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x52A0;&#x4E00;&#x4E2A; <code>return</code> &#x58F0;&#x660E;&#xFF09;</li>
+</ul>
+<p>&#x5F53;&#x4F60;&#x5F00;&#x53D1;&#x811A;&#x672C;&#x7A0B;&#x5E8F;&#x65F6;&#xFF0C;&#x5199;&#x4E00;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x540E;&#xFF0C;&#x8FD0;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x5199;&#x66F4;&#x591A;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x8FD0;&#x884C;&#x811A;&#x672C;&#xFF0C;&#x5982;&#x6B64;&#x3002;&#x8FD9;&#x6837;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5C3D;&#x65E9;&#x5730;&#x53D1;&#x73B0;&#x811A;&#x672C;&#x4E2D;&#x7684;&#x9519;&#x8BEF;&#x5E76;&#x6539;&#x6B63;&#x3002;
+&#x5728;&#x5199;&#x811A;&#x672C;&#x65F6;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>&#x5B58;&#x6839;</strong> &#x6280;&#x5DE7;&#x6765;&#x6682;&#x65F6;&#x66FF;&#x4EE3;&#x51FD;&#x6570;&#x4F53;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-function"><span class="hljs-title">system_info</span></span>()
+{
+    <span class="hljs-comment"># Temporary function stub</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;function system_info&quot;</span>
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x811A;&#x672C;&#x5C31;&#x53EF;&#x4EE5;&#x6210;&#x529F;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x4F7F;&#x6211;&#x4EEC;&#x8FD8;&#x6CA1;&#x6709;&#x5199;&#x5B8C; system_info() &#x51FD;&#x6570;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4E4B;&#x540E;&#x66FF;&#x6362;&#x6389;&#x5B58;&#x6839;&#x4EE3;&#x7801;&#x3002;
+&#x4F7F;&#x7528; <code>echo</code> &#x7684;&#x76EE;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x811A;&#x672C;&#x8FD0;&#x884C;&#x65F6;&#x4ECE;&#x7ED3;&#x679C;&#x4E2D;&#x83B7;&#x5F97;&#x53CD;&#x9988;&#xFF08;&#x77E5;&#x9053;&#x54EA;&#x91CC;&#x8FD8;&#x6CA1;&#x5B8C;&#x6210;&#xFF09;&#x3002;
+&#x7ED9;&#x4E0A;&#x9762;&#x7684;&#x793A;&#x4F8B;&#x52A0;&#x4E0A;&#x5B58;&#x6839;&#xFF0C;&#x8BA9;&#x793A;&#x4F8B;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># sysinfo_page - A script to produce an system information HTML file</span>
+
+<span class="hljs-comment">##### Constants</span>
+
+TITLE=<span class="hljs-string">&quot;System Information for <span class="hljs-variable">$HOSTNAME</span>&quot;</span>
+RIGHT_NOW=$(date +<span class="hljs-string">&quot;%x %r %Z&quot;</span>)
+TIME_STAMP=<span class="hljs-string">&quot;Updated on <span class="hljs-variable">$RIGHT_NOW</span> by <span class="hljs-variable">$USER</span>&quot;</span>
+
+<span class="hljs-comment">##### Functions</span>
+
+<span class="hljs-function"><span class="hljs-title">system_info</span></span>()
+{
+    <span class="hljs-comment"># Temporary function stub</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;function system_info&quot;</span>
+}
+
+
+<span class="hljs-function"><span class="hljs-title">show_uptime</span></span>()
+{
+    <span class="hljs-comment"># Temporary function stub</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;function show_uptime&quot;</span>
+}
+
+
+<span class="hljs-function"><span class="hljs-title">drive_space</span></span>()
+{
+    <span class="hljs-comment"># Temporary function stub</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;function drive_space&quot;</span>
+}
+
+
+<span class="hljs-function"><span class="hljs-title">home_space</span></span>()
+{
+    <span class="hljs-comment"># Temporary function stub</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;function home_space&quot;</span>
+}
+
+
+<span class="hljs-comment">##### Main</span>
+
+cat &lt;&lt;- _EOF_
+  &lt;html&gt;
+  &lt;head&gt;
+      &lt;title&gt;<span class="hljs-variable">$TITLE</span>&lt;/title&gt;
+  &lt;/head&gt;
+
+  &lt;body&gt;
+      &lt;h1&gt;<span class="hljs-variable">$TITLE</span>&lt;/h1&gt;
+      &lt;p&gt;<span class="hljs-variable">$TIME_STAMP</span>&lt;/p&gt;
+      $(system_info)
+      $(show_uptime)
+      $(drive_space)
+      $(home_space)
+  &lt;/body&gt;
+  &lt;/html&gt;
+_EOF_
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ch05/" class="navigation navigation-prev " aria-label="Previous page: 5. 命令替换和常量">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ch07/" class="navigation navigation-next " aria-label="Next page: 7. 系统信息">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6. Shell 函数","level":"1.8","depth":1,"next":{"title":"7. 系统信息","level":"1.9","depth":1,"path":"ch07/README.md","ref":"ch07/README.md","articles":[]},"previous":{"title":"5. 命令替换和常量","level":"1.7","depth":1,"path":"ch05/README.md","ref":"ch05/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch06/README.md","mtime":"2020-08-02T08:25:49.060Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-02T08:39:36.980Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

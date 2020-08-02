@@ -1,0 +1,528 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>4. 变量 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ch05/" />
+    
+    
+    <link rel="prev" href="../ch03/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    本书目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch01/">
+            
+                <a href="../ch01/">
+            
+                    
+                    1. 创建你的第一个脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ch02/">
+            
+                <a href="../ch02/">
+            
+                    
+                    2. 编辑已有脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../ch03/">
+            
+                <a href="../ch03/">
+            
+                    
+                    3. HERE 脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    4. 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../ch05/">
+            
+                <a href="../ch05/">
+            
+                    
+                    5. 命令替换和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../ch06/">
+            
+                <a href="../ch06/">
+            
+                    
+                    6. Shell 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ch07/">
+            
+                <a href="../ch07/">
+            
+                    
+                    7. 系统信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ch08/">
+            
+                <a href="../ch08/">
+            
+                    
+                    8. 流程控制（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../ch09/">
+            
+                <a href="../ch09/">
+            
+                    
+                    9. 远离问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../ch10/">
+            
+                <a href="../ch10/">
+            
+                    
+                    10. 键盘输入和算术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../ch11/">
+            
+                <a href="../ch11/">
+            
+                    
+                    11. 流程控制（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ch12/">
+            
+                <a href="../ch12/">
+            
+                    
+                    12. 位置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../ch13/">
+            
+                <a href="../ch13/">
+            
+                    
+                    13. 流程控制（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../ch14/">
+            
+                <a href="../ch14/">
+            
+                    
+                    14. 错误、信号和陷阱（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../ch15/">
+            
+                <a href="../ch15/">
+            
+                    
+                    15. 错误、信号和陷阱（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../ch16/">
+            
+                <a href="../ch16/">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >4. 变量</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="4-&#x53D8;&#x91CF;">4. &#x53D8;&#x91CF;</h1>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># sysinfo_page - A script to produce an HTML file</span>
+
+cat &lt;&lt;- _EOF_
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;
+        My System Information
+        &lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;h1&gt;My System Information&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+_EOF_
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x811A;&#x672C;&#x4E2D;&#x300C;My System Information&#x300D;&#x91CD;&#x590D;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x6539;&#x8FDB;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># sysinfo_page - A script to produce an HTML file</span>
+
+title=<span class="hljs-string">&quot;My System Information&quot;</span>
+
+cat &lt;&lt;- _EOF_
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;
+        <span class="hljs-variable">$title</span>
+        &lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;h1&gt;<span class="hljs-variable">$title</span>&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+_EOF_
+</code></pre>
+<h2 id="&#x53D8;&#x91CF;">&#x53D8;&#x91CF;</h2>
+<p>&#x4E0A;&#x8FF0;&#x793A;&#x4F8B;&#x4E2D;&#x4F7F;&#x7528;&#x4E86; <strong>&#x53D8;&#x91CF;</strong>&#xFF0C;&#x51E0;&#x4E4E;&#x5728;&#x6240;&#x6709;&#x8BED;&#x8A00;&#x4E2D;&#x90FD;&#x6709;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x3002;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x5B58;&#x50A8;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x540D;&#x5B57;&#x6765;&#x5F15;&#x7528;&#x3002;
+shell &#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x78B0;&#x5230; <code>$</code> &#x7B26;&#xFF0C;&#x90FD;&#x4F1A;&#x89C6;&#x4E3A;&#x53D8;&#x91CF;&#x5E76;&#x7528;&#x53D8;&#x91CF;&#x503C;&#x4EE3;&#x66FF;&#x5B83;&#x3002;</p>
+<h2 id="&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;">&#x5982;&#x4F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</h2>
+<p>&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x540D;&#xFF0C;&#x540E;&#x9762;&#x8DDF; <code>=</code> &#x53F7;&#xFF0C;<code>=</code> &#x53F7;&#x540E;&#x9762;&#x8DDF;&#x8981;&#x8D4B;&#x4E88;&#x7684;&#x503C;&#x3002;
+&#x53D8;&#x91CF;&#x547D;&#x540D;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x53D8;&#x91CF;&#x540D;&#x4EE5;&#x5B57;&#x6BCD;&#x5F00;&#x5934;</li>
+<li>&#x4E0D;&#x53EF;&#x4EE5;&#x5D4C;&#x5957;&#x7A7A;&#x683C;&#x3002;&#x4F7F;&#x7528;&#x4E0B;&#x5212;&#x7EBF;&#x4EE3;&#x66FF;</li>
+<li>&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x6807;&#x70B9;&#x7B26;&#x53F7;</li>
+</ul>
+<h2 id="&#x73AF;&#x5883;&#x53D8;&#x91CF;">&#x73AF;&#x5883;&#x53D8;&#x91CF;</h2>
+<p>&#x5F53;&#x4F60;&#x5F00;&#x542F;&#x4E00;&#x4E2A; shell &#x4F1A;&#x8BDD;&#x65F6;&#xFF0C;&#x542F;&#x52A8;&#x6587;&#x4EF6;&#x5DF2;&#x7ECF;&#x5E2E;&#x4F60;&#x8BBE;&#x7F6E;&#x597D;&#x4E86;&#x4E00;&#x4E9B;&#x53D8;&#x91CF;&#x3002;&#x4F7F;&#x7528; <code>printenv</code> &#x67E5;&#x770B;&#x4F60;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3002;&#x73AF;&#x5883;&#x53D8;&#x91CF; <code>HOSTNAME</code> &#x5B58;&#x50A8;&#x4E86;&#x4F60;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x6DFB;&#x52A0;&#x5230;&#x4E0A;&#x9762;&#x7684;&#x811A;&#x672C;&#x4E2D;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-comment"># sysinfo_page - A script to produce an HTML file</span>
+
+title=<span class="hljs-string">&quot;System Information for&quot;</span>
+
+cat &lt;&lt;- _EOF_
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;
+        <span class="hljs-variable">$title</span> <span class="hljs-variable">$HOSTNAME</span>
+        &lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+    &lt;h1&gt;<span class="hljs-variable">$title</span> <span class="hljs-variable">$HOSTNAME</span>&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+_EOF_
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#xFF0C;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x90FD;&#x662F;&#x5927;&#x5199;&#x7684;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ch03/" class="navigation navigation-prev " aria-label="Previous page: 3. HERE 脚本">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ch05/" class="navigation navigation-next " aria-label="Next page: 5. 命令替换和常量">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"4. 变量","level":"1.6","depth":1,"next":{"title":"5. 命令替换和常量","level":"1.7","depth":1,"path":"ch05/README.md","ref":"ch05/README.md","articles":[]},"previous":{"title":"3. HERE 脚本","level":"1.5","depth":1,"path":"ch03/README.md","ref":"ch03/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch04/README.md","mtime":"2020-08-02T08:40:20.613Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-02T08:39:36.980Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

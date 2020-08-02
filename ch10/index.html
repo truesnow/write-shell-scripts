@@ -1,0 +1,541 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>10. 键盘输入和算术 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ch11/" />
+    
+    
+    <link rel="prev" href="../ch09/" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SUMMARY.html">
+            
+                <a href="../SUMMARY.html">
+            
+                    
+                    本书目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ch01/">
+            
+                <a href="../ch01/">
+            
+                    
+                    1. 创建你的第一个脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ch02/">
+            
+                <a href="../ch02/">
+            
+                    
+                    2. 编辑已有脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../ch03/">
+            
+                <a href="../ch03/">
+            
+                    
+                    3. HERE 脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../ch04/">
+            
+                <a href="../ch04/">
+            
+                    
+                    4. 变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../ch05/">
+            
+                <a href="../ch05/">
+            
+                    
+                    5. 命令替换和常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../ch06/">
+            
+                <a href="../ch06/">
+            
+                    
+                    6. Shell 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ch07/">
+            
+                <a href="../ch07/">
+            
+                    
+                    7. 系统信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ch08/">
+            
+                <a href="../ch08/">
+            
+                    
+                    8. 流程控制（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../ch09/">
+            
+                <a href="../ch09/">
+            
+                    
+                    9. 远离问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    10. 键盘输入和算术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../ch11/">
+            
+                <a href="../ch11/">
+            
+                    
+                    11. 流程控制（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../ch12/">
+            
+                <a href="../ch12/">
+            
+                    
+                    12. 位置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../ch13/">
+            
+                <a href="../ch13/">
+            
+                    
+                    13. 流程控制（三）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../ch14/">
+            
+                <a href="../ch14/">
+            
+                    
+                    14. 错误、信号和陷阱（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../ch15/">
+            
+                <a href="../ch15/">
+            
+                    
+                    15. 错误、信号和陷阱（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../ch16/">
+            
+                <a href="../ch16/">
+            
+                    
+                    总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >10. 键盘输入和算术</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="10-&#x952E;&#x76D8;&#x8F93;&#x5165;&#x548C;&#x7B97;&#x672F;">10. &#x952E;&#x76D8;&#x8F93;&#x5165;&#x548C;&#x7B97;&#x672F;</h1>
+<p>&#x76EE;&#x524D;&#x4E3A;&#x6B62;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x811A;&#x672C;&#x90FD;&#x6CA1;&#x6709;&#x4EA4;&#x4E92;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x4E0D;&#x9700;&#x8981;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x3002;&#x672C;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5B66;&#x4E60;&#x811A;&#x672C;&#x5982;&#x4F55;&#x95EE;&#x95EE;&#x9898;&#xFF0C;&#x5E76;&#x83B7;&#x53D6;&#x4EE5;&#x53CA;&#x4F7F;&#x7528;&#x5176;&#x54CD;&#x5E94;&#x3002;</p>
+<h2 id="read">read</h2>
+<p>&#x8981;&#x4ECE;&#x952E;&#x76D8;&#x8BFB;&#x53D6;&#x8F93;&#x5165;&#xFF0C;&#x4F7F;&#x7528; <code>read</code> &#x547D;&#x4EE4;&#x3002;<code>read</code> &#x547D;&#x4EE4;&#x4ECE;&#x952E;&#x76D8;&#x8BFB;&#x53D6;&#x8F93;&#x5165;&#x5E76;&#x5C06;&#x5176;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter some text &gt; &quot;</span>
+<span class="hljs-built_in">read</span> text
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;You entered: <span class="hljs-variable">$text</span>&quot;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F; <code>echo</code> &#x547D;&#x4EE4;&#x7684; <code>-n</code> &#x53C2;&#x6570;&#x7528;&#x4E8E;&#x5C06;&#x5149;&#x6807;&#x4FDD;&#x7559;&#x5728;&#x540C;&#x4E00;&#x884C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B83;&#x4F7F;&#x5F97; <code>echo</code> &#x8F93;&#x51FA;&#x7684;&#x63D0;&#x793A;&#x540E;&#x9762;&#x4E0D;&#x4F1A;&#x52A0;&#x4E0A;&#x6362;&#x884C;&#x3002;
+&#x63A5;&#x7740;&#xFF0C;&#x8C03;&#x7528;&#x4E86; <code>read</code> &#x547D;&#x4EE4;&#xFF0C;&#x5E76;&#x4EE5; <code>text</code> &#x4E3A;&#x53C2;&#x6570;&#x3002;&#x8BE5;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#x662F;&#x7B49;&#x5F85;&#x7528;&#x6237;&#x8F93;&#x5165;&#x5E76;&#x4EE5;&#x6362;&#x884C;&#xFF08;enter&#xFF09;&#x7ED3;&#x675F;&#xFF0C;&#x5E76;&#x5C06;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x8D4B;&#x503C;&#x7ED9; <code>text</code>&#x3002;
+&#x5982;&#x679C;&#x4F60;&#x4E0D;&#x7ED9; <code>read</code> &#x547D;&#x4EE4;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#x63A5;&#x6536;&#xFF0C;&#x90A3;&#x4E48;&#x5C06;&#x8D4B;&#x503C;&#x7ED9;&#x73AF;&#x5883;&#x53D8;&#x91CF; <code>REPLY</code>&#x3002;
+<code>read</code> &#x547D;&#x4EE4;&#x4E5F;&#x6709;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x884C;&#x9009;&#x9879;&#x3002;&#x6700;&#x6709;&#x8DA3;&#x7684;&#x662F; <code>-t</code> &#x548C; <code>-s</code> &#x9009;&#x9879;&#x3002;<code>-t</code> &#x9009;&#x9879;&#x540E;&#x8DDF;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#xFF0C;&#x7ED9; <code>read</code> &#x547D;&#x4EE4;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x4EE5;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#x7684;&#x81EA;&#x52A8;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x7528;&#x6237;&#x5728;&#x7ED9;&#x5B9A;&#x65F6;&#x95F4;&#x5185;&#x6CA1;&#x6709;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#xFF0C;&#x90A3;&#x4E48; <code>read</code> &#x4F1A;&#x653E;&#x5F03;&#x8BFB;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x3002;&#x8FD9;&#x4E2A;&#x9009;&#x9879;&#x53EF;&#x4EE5;&#x5728;&#x7528;&#x6237;&#x6CA1;&#x6709;&#x6839;&#x636E;&#x63D0;&#x793A;&#x8FDB;&#x884C;&#x8F93;&#x5165;&#x800C;&#x811A;&#x672C;&#x5FC5;&#x987B;&#x7EE7;&#x7EED;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#xFF08;&#x8D85;&#x65F6;&#x65F6;&#x811A;&#x672C;&#x7ED9;&#x5B9A;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x54CD;&#x5E94;&#xFF09;&#x3002;<code>-t</code> &#x9009;&#x9879;&#x4F7F;&#x7528;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Hurry up and type something! &gt; &quot;</span>
+<span class="hljs-keyword">if</span> <span class="hljs-built_in">read</span> -t 3 response; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Great, you made it in time!&quot;</span>
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Sorry, you are too slow!&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p><code>-s</code> &#x9009;&#x9879;&#x4F7F;&#x5F97;&#x7528;&#x6237;&#x7684;&#x8F93;&#x5165;&#x4E0D;&#x4F1A;&#x663E;&#x793A;&#x3002;&#x8FD9;&#x5728;&#x4F60;&#x9700;&#x8981;&#x7528;&#x6237;&#x8F93;&#x5165;&#x5BC6;&#x7801;&#x6216;&#x5176;&#x4ED6;&#x4FDD;&#x5BC6;&#x4FE1;&#x606F;&#x65F6;&#x5F88;&#x6709;&#x7528;&#x3002;</p>
+<h2 id="&#x7B97;&#x672F;">&#x7B97;&#x672F;</h2>
+<p>shell &#x63D0;&#x4F9B;&#x4E86; <strong>&#x6574;&#x6570;&#x8FD0;&#x7B97;</strong> &#x7684;&#x529F;&#x80FD;&#x3002;
+&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8FDB;&#x884C;&#x5C0F;&#x6570;&#x8FD0;&#x7B97;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x53EB; <code>bc</code> &#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x4EFB;&#x610F;&#x7CBE;&#x5EA6;&#x7684;&#x8BA1;&#x7B97;&#x3002;
+&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">echo</span> $((2+2))
+</code></pre>
+<p>&#x5982;&#x4F60;&#x6240;&#x89C1;&#xFF0C;&#x5F53;&#x4F60;&#x5C06;&#x8868;&#x8FBE;&#x5F0F;&#x653E;&#x5728;&#x4E24;&#x5C42;&#x5C0F;&#x62EC;&#x53F7;&#x4E2D;&#x65F6;&#xFF0C;shell &#x5C31;&#x4F1A;&#x5C06;&#x5176;&#x8FDB;&#x884C;&#x7B97;&#x672F;&#x5C55;&#x5F00;&#x3002;
+&#x6CE8;&#x610F;&#x7A7A;&#x683C;&#x7B26;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;&#xFF0C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x90FD;&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-built_in">echo</span> $((2+2))
+<span class="hljs-built_in">echo</span> $(( 2+2 ))
+<span class="hljs-built_in">echo</span> $(( 2 + 2 ))
+</code></pre>
+<p>shell  &#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5404;&#x79CD;&#x5404;&#x79CD;&#x7684;&#x5E38;&#x89C1;&#x8FD0;&#x7B97;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+first_num=0
+second_num=0
+
+<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter the first number --&gt; &quot;</span>
+<span class="hljs-built_in">read</span> first_num
+<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter the second number -&gt; &quot;</span>
+<span class="hljs-built_in">read</span> second_num
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;first number + second number = <span class="hljs-variable">$((first_num + second_num)</span>)&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;first number - second number = <span class="hljs-variable">$((first_num - second_num)</span>)&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;first number * second number = <span class="hljs-variable">$((first_num * second_num)</span>)&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;first number / second number = <span class="hljs-variable">$((first_num / second_num)</span>)&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;first number % second number = <span class="hljs-variable">$((first_num % second_num)</span>)&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;first number raised to the&quot;</span>
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;power of the second number = <span class="hljs-variable">$((first_num ** second_num)</span>)&quot;</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x5728;&#x7B97;&#x672F;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x53C2;&#x6570;&#x4E0D;&#x9700;&#x8981; <code>$</code> &#x7B26;&#x3002;
+&#x6CE8;&#x610F;&#xFF0C;&#x8FC7;&#x5927;&#x7684;&#x6574;&#x6570;&#x4F1A;&#x53D8;&#x6210;&#x8D1F;&#x6570;&#x3002;&#x4EE5; 0 &#x505A;&#x9664;&#x6570;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#x3002;
+<code>%</code> &#x53F7;&#x8868;&#x793A;&#x53D6;&#x4F59;&#x8FD0;&#x7B97;&#xFF08;&#x4E5F;&#x53EB;&#x53D6;&#x6A21;&#x8FD0;&#x7B97;&#xFF09;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+number=0
+
+<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter a number &gt; &quot;</span>
+<span class="hljs-built_in">read</span> number
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Number is <span class="hljs-variable">$number</span>&quot;</span>
+<span class="hljs-keyword">if</span> [ $((number % 2)) <span class="hljs-_">-eq</span> 0 ]; <span class="hljs-keyword">then</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Number is even&quot;</span>
+<span class="hljs-keyword">else</span>
+    <span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;Number is odd&quot;</span>
+<span class="hljs-keyword">fi</span>
+</code></pre>
+<p>&#x5229;&#x7528;&#x53D6;&#x4F59;&#x6765;&#x5C06;&#x79D2;&#x8F6C;&#x6362;&#x4E3A;&#x65F6;&#x5206;&#x79D2;&#x7684;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-meta">#!/bin/bash
+</span>
+seconds=0
+
+<span class="hljs-built_in">echo</span> -n <span class="hljs-string">&quot;Enter number of seconds &gt; &quot;</span>
+<span class="hljs-built_in">read</span> seconds
+
+hours=$((seconds / 3600))
+seconds=$((seconds % 3600))
+minutes=$((seconds / 60))
+seconds=$((seconds % 60))
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;<span class="hljs-variable">$hours</span> hour(s) <span class="hljs-variable">$minutes</span> minute(s) <span class="hljs-variable">$seconds</span> second(s)&quot;</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../ch09/" class="navigation navigation-prev " aria-label="Previous page: 9. 远离问题">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ch11/" class="navigation navigation-next " aria-label="Next page: 11. 流程控制（二）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"10. 键盘输入和算术","level":"1.12","depth":1,"next":{"title":"11. 流程控制（二）","level":"1.13","depth":1,"path":"ch11/README.md","ref":"ch11/README.md","articles":[]},"previous":{"title":"9. 远离问题","level":"1.11","depth":1,"path":"ch09/README.md","ref":"ch09/README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ch10/README.md","mtime":"2020-08-02T08:28:22.350Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-02T08:39:36.980Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
